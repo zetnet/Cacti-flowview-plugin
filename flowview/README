@@ -1,0 +1,72 @@
+/*******************************************************************************
+
+    Author ......... Jimmy Conner
+    Contact ........ jimmy@sqmail.org
+    Home Site ...... http://cactiusers.org
+    Program ........ Flowviewer
+    Version ........ 0.5.2
+    Purpose ........ A simple Viewer for your Netflow flows
+
+*******************************************************************************/
+
+
+----[ Purpose
+
+    This plugin allows you to see reports based off the data in your Netflow flows.
+
+----[ Features
+
+    Fully customizable reports
+
+----[ Installation
+
+    First, make sure you have the plugin architecture installed.
+
+    http://cactiusers.org/wiki/PluginArchitectureInstall
+
+    Install just like any other plugin, just throw it in the plugin directory,
+    in a folder called flowview.
+    Edit your includes/config.php and add it to your $plugins list, and you are rolling
+
+    http://cactiusers.org/wiki/PluginsInstall
+
+   
+----[ Possible Bugs?
+   
+    If you figure out this problem, let me know!!!
+
+
+----[ Future Changes
+    
+    Got any ideas or complaints, please e-mail me!
+
+----[ Changelog
+
+	--- 0.5.2 ---
+		Fix for the plugin not auto-creating "plugin_flowview_devices" table
+
+	--- 0.5.1 ---
+		Fix for IE and saving Queries
+
+	--- 0.5 ---
+		Add flow-tools replacement startup script to allow launching of multiple processes based upon devices added
+		Fix issue with start and stop times close to midnight not loading the proper days data
+		Add Saved Queries
+		Change Sort field to be drop downs with column names
+		Add ability to schedule and email out Netflow Scans
+				
+	--- 0.4 ---
+		Minor fix for when using flow path "/"
+		Fix Cacti 0.8.7 Compatibility
+
+	--- 0.3 ---
+		Add time support for relative times (NOW, -1 HOUR, -2 DAYS, -10 MINTUES)
+			Must leave Date blank for these to work properly
+		Add device name to path if present
+
+	--- 0.2 ---
+		Add DNS Support
+
+	--- 0.1 ---
+		Initial release
+
